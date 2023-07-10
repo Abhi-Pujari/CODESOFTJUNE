@@ -15,17 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-# from hello import views
 from project import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('',include('hello.urls')),
-    # path('home/',views.show,name='show-view'),
-    # path('sc/',views.school,name='sc-view'),
-    # path('con/',views.contact,name='con-view'),
-
-
     path('',views.index,name="todo"),
     path('del/<str:item_id>', views.remove, name="del"),
 ]
